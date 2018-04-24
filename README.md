@@ -134,3 +134,5 @@ If btcd-cli4j has been useful to you and you feel like contributing, consider po
 * Dogecoin: `D6DUTo8MTxredfHbbQsb7MLqu7zkuFSMnt`
 
 If you have any further questions, feel free to visit us at the `#bitcoin` IRC channel on [freenode](https://freenode.net/).
+
+support bitcoin v0.14.0 up
