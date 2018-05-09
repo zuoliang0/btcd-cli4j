@@ -55,8 +55,14 @@ public class JsonRpcClientImpl implements JsonRpcClient {
 	@Override
 	public <T> String execute(String method, List<T> params) throws BitcoindException, 
 			CommunicationException {
-		LOG.info(">> execute(..): invoking 'bitcoind' JSON-RPC API command '{}' with params: '{}'", 
-				method, params);
+		if ("walletpassphrase".equals(method)) {
+			LOG.info(">> execute(..): invoking 'bitcoind' JSON-RPC API command '{}' with params: '{}'",
+					method, "*");
+		} else {
+			LOG.info(">> execute(..): invoking 'bitcoind' JSON-RPC API command '{}' with params: '{}'",
+					method, params);
+		}
+
 		String requestUuid = getNewUuid();
 		JsonRpcRequest<T> request = getNewRequest(method, params, requestUuid);
 		String requestJson = mapper.mapToJson(request);
