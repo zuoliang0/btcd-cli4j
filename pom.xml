@@ -27,10 +27,16 @@
 
 	<distributionManagement>
 		<repository>
-			<id>mvn-nemp-ftp</id>
-			<name>Nemp's Maven Repository</name>
-			<url>ftp://nemp.planet.ee/htdocs/mvn/</url>
+			<id>releases</id>
+			<name>User Project Release</name>
+			<url>http://192.168.9.102:8081/nexus/content/repositories/releases/</url>
 		</repository>
+
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>User Project SNAPSHOTS</name>
+			<url>http://192.168.9.102:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
 	</distributionManagement>
 
 	<properties>
